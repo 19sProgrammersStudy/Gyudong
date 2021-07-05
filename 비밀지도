@@ -1,6 +1,6 @@
-[https://programmers.co.kr/learn/courses/30/lessons/17681](url)
 
-```c++ 
+
+```C++
 #include <string>
 #include <vector>
 #include <iostream>
@@ -88,4 +88,4 @@ void makeBinary(int num)
     }
 
 }
-```
+```[https://programmers.co.kr/learn/courses/30/lessons/17681](url)
