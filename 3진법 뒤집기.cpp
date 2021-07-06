@@ -11,9 +11,14 @@ void makeTrinary(int nn);
 int solution(int n) {
     int answer = 0;
     num = n;
-    makeTrinary(num);
-    calculate();
-    answer = ans;
+    if(n == 1){
+        answer = 1;
+    }
+    else{
+        makeTrinary(num);
+        calculate();
+        answer = ans;
+    }
     return answer;
 }
 void calculate()
