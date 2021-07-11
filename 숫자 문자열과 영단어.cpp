@@ -71,7 +71,7 @@ int solution(string s) {
         else{
             temp += s[i];
         }
-    }
+    } 
     if(findNum()){
             temp = "";
         }
