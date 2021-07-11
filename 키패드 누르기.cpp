@@ -91,7 +91,7 @@ void setting()
     p[0] = make_pair(3,1);
     p[1] = make_pair(0,0);
     p[2] = make_pair(0,1);
-    p[3] = make_pair(0,2);
+    p[3] = make_pair(0,2); 
     p[4] = make_pair(1,0);
     p[5] = make_pair(1,1);
     p[6] = make_pair(1,2);
