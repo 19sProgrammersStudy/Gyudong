@@ -1,29 +1,30 @@
+//https://programmers.co.kr/learn/courses/30/lessons/12921?language=cpp
 #include <string>
 #include <vector>
 #include <iostream>
 #include <cmath>
 using namespace std;
-int cnt = 0;
-bool isSosu(int num);
+//int arr[1000010]={0};
 int solution(int n) {
     int answer = 0;
-    for(int i=1;i<=n;i++){
-        if(isSosu(i))
-            cnt++;
+    int * arr;
+    arr = (int *)malloc(sizeof(int) * (n+1));
+    for(int i=2;i<=n;i++){
+        arr[i] = i;
     }
-    answer = cnt;
-    return answer;
-}
-bool isSosu(int num)
-{
-    int cnted = 0;
-    if(num < 2)
-        return false;
-    for(int i=2;i<=sqrt(num);i++){
-        if(num%i == 0){
-            return false;
+    for(int i=2;i<=n;i++){
+        if(arr[i] == 0){
+            continue;
+        }
+        for(int j=i+i;j<n+1;j+=i){
+            arr[j] = 0;
         }
     }
-    return true;
+    for(int i=2;i<=n;i++){
+        if(arr[i] != 0){
+            answer++;
+        }
+    }
+    //cout<<endl;
+    return answer;
 }
-//https://programmers.co.kr/learn/courses/30/lessons/12921
